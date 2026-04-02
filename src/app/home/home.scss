@@ -1,0 +1,59 @@
+@reference "../../styles.scss";
+
+.main__container {
+  @apply bg-light-main overflow-x-hidden;
+}
+
+.home__hero {
+  @apply relative z-10 flex min-h-[100svh] w-full items-center justify-between gap-10 overflow-hidden bg-light-main px-6 py-10 text-dark-main sm:px-10 lg:px-20;
+
+  &::after {
+    @apply absolute inset-x-0 bottom-0 h-[20rem] bg-gradient-to-t from-yellow-main to-transparent content-[''];
+  }
+
+  &-text {
+    @apply relative z-10 flex w-full max-w-[82rem] flex-col items-start justify-center text-left;
+  }
+
+  &-img {
+    @apply absolute inset-y-0 -right-100 z-20 flex w-[min(92vw,96rem)] items-end justify-end;
+  }
+
+  &-text h1 {
+    @apply text-[15rem] font-black uppercase leading-[0.85];
+  }
+
+  &-subtext {
+    @apply mt-8 inline-flex items-center overflow-hidden whitespace-nowrap pr-2 text-[clamp(1.5rem,2.2vw,2.5rem)] leading-[1.05] tracking-[-0.03em] font-google-sans;
+  }
+
+  &-subtext-char {
+    @apply inline-block;
+  }
+
+  &-subtext-cursor {
+    @apply inline-block h-[1em] w-[2px] bg-dark-main align-middle;
+  }
+
+  &-img img {
+    @apply h-[min(112vh,92rem)] w-auto max-w-none object-contain object-right;
+    mask-image: linear-gradient(to bottom, black 70%, transparent 100%);
+  }
+}
+
+.subcolor {
+  @apply text-yellow-main;
+}
+
+.about-me {
+  @apply fixed inset-0 z-20 flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-light-main px-6 py-10 text-dark-main sm:px-10 lg:px-20;
+  will-change: transform;
+
+  &__content {
+    @apply flex flex-col items-center justify-center text-center;
+  }
+
+  &__content h2 {
+    @apply text-[clamp(4rem,10vw,12rem)] font-black uppercase leading-[0.85] tracking-[-0.04em];
+  }
+}

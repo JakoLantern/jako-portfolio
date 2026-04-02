@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Google+Sans+Flex:opsz,wght@6..144,1..1000&display=swap');
+@import 'tailwindcss';
+
+* {
+  @apply m-0 p-0 box-border;
+}
+
+@theme {
+  --font-sans: 'Bebas Neue', ui-sans-serif, system-ui, sans-serif;
+  --font-google-sans: 'Google Sans Flex', ui-sans-serif, system-ui, sans-serif;
+
+  --color-light-main: #e3e3db;
+  --color-dark-main: #141414;
+
+  --color-yellow-main: #FACC15;
+  --color-yellow-dark: #CA8A04;
+  
+  --color-purple-main: #7C3AED;
+
+  --color-white: #FFFFFF;
+}
+
+@layer base {
+  html,
+  body {
+    font-family: var(--font-sans);
+  }
+}
