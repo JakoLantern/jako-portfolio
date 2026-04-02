@@ -1,7 +1,7 @@
 @reference "../../styles.scss";
 
 .main__container {
-  @apply bg-light-main overflow-x-hidden;
+  @apply relative bg-light-main overflow-x-hidden;
 }
 
 .home__hero {
@@ -46,14 +46,33 @@
 }
 
 .about-me {
-  @apply fixed inset-0 z-20 flex min-h-[100svh] w-full items-center justify-center overflow-hidden bg-light-main px-6 py-10 text-dark-main sm:px-10 lg:px-20;
+  @apply fixed inset-0 z-20 flex min-h-[100svh] w-full items-center justify-center 
+         overflow-hidden bg-light-main px-6 py-10 text-dark-main sm:px-10 lg:px-20;
   will-change: transform;
 
   &__content {
-    @apply flex flex-col items-center justify-center text-center;
+    @apply flex w-full max-w-[72rem] flex-col items-center justify-center;
+  }
+
+  &__header {
+    @apply flex w-full justify-center;
   }
 
   &__content h2 {
-    @apply text-[clamp(4rem,10vw,12rem)] font-black uppercase leading-[0.85] tracking-[-0.04em];
+    @apply text-[clamp(4rem,10vw,12rem)] font-black uppercase leading-[0.85] 
+           tracking-[-0.02em] text-dark-main;
+  }
+
+  &__subtext {
+    @apply max-w-[70rem] text-[clamp(2rem,3vw,5rem)] leading-[1.05] 
+           tracking-[-0.03em] font-google-sans;
+  }
+
+  &__subtext p {
+    @apply m-0 font-semibold;
+  }
+
+  &__word {
+    @apply inline-block;
   }
 }
