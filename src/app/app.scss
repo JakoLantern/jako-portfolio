@@ -1,0 +1,21 @@
+@reference "../styles.scss";
+
+:host {
+	@apply block;
+}
+
+.app__scroll-progress {
+	@apply fixed left-4 top-4 z-50 h-3 w-[calc(100%-2rem)] overflow-hidden rounded-full bg-light-main/20 backdrop-blur-2xl shadow-[0_10px_30px_rgba(0,0,0,0.08)];
+}
+
+.app__scroll-progress-fill {
+	@apply block h-full w-full origin-left opacity-45;
+	background: linear-gradient(
+		90deg,
+		#FDE68A 0%,
+		#FACC15 48%,
+		#ECC113 100%
+	);
+	transform: scaleX(0);
+	will-change: transform;
+}
