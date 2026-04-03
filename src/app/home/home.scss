@@ -51,7 +51,7 @@
   will-change: transform;
 
   &__content {
-    @apply flex w-full max-w-[72rem] flex-col items-center justify-center;
+    @apply flex w-full max-w-[72rem] flex-col items-center justify-center gap-8 sm:gap-10 lg:gap-14;
   }
 
   &__header {
@@ -64,8 +64,8 @@
   }
 
   &__subtext {
-    @apply max-w-[70rem] text-[clamp(2rem,3vw,5rem)] leading-[1.05] 
-           tracking-[-0.03em] font-google-sans;
+      @apply max-w-[70rem] text-[clamp(2rem,3vw,5rem)] leading-[1.05] 
+        tracking-[-0.03em] font-google-sans;
   }
 
   &__subtext p {
@@ -74,5 +74,19 @@
 
   &__word {
     @apply inline-block;
+  }
+
+  &__next-section{
+    @apply flex h-[10rem] w-[20rem] items-center justify-center overflow-hidden rounded-full bg-dark-main;
+    transform-origin: center center;
+    will-change: transform, top, left, width, height, border-radius, opacity;
+  }
+
+  &__next-section-content {
+    @apply flex items-center justify-center gap-4 text-white;
+  }
+
+  &__next-section-icon {
+    @apply h-[5rem] w-[5rem] shrink-0 fill-current;
   }
 }
