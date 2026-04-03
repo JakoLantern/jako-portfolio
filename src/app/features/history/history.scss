@@ -1,0 +1,33 @@
+@reference "../../../styles.scss";
+
+:host {
+	@apply block;
+}
+
+.history {
+	@apply relative min-h-[100svh] w-full overflow-hidden bg-dark-main px-6 py-10 text-light-main sm:px-10 lg:px-20;
+
+	&__stage {
+		@apply relative flex min-h-[100svh] w-full items-center justify-center;
+	}
+
+	&__copy {
+		@apply relative z-20 flex max-w-[64rem] flex-col items-center text-center;
+	}
+
+	&__eyebrow {
+		@apply mb-4 text-[1.2rem] uppercase tracking-[0.3em] text-light-main/60 font-google-sans;
+	}
+
+	&__title {
+		@apply text-[clamp(4rem,10vw,12rem)] font-black uppercase leading-[0.85] tracking-[-0.02em];
+	}
+
+	&__blob {
+		@apply absolute left-1/2 top-1/2 z-10 h-[min(58vw,42rem)] w-[min(58vw,42rem)] -translate-x-1/2 -translate-y-1/2 rounded-full opacity-0;
+		background: radial-gradient(circle at 35% 30%, #fde68a 0%, #facc15 45%, #ecc113 100%);
+		filter: blur(0px) saturate(1.05);
+		box-shadow: 0 0 120px rgba(250, 204, 21, 0.28);
+		will-change: transform, opacity;
+	}
+}

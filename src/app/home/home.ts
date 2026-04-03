@@ -1,10 +1,12 @@
 import { afterNextRender, Component, ElementRef, inject } from '@angular/core';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import { History } from '../features/history/history';
 
 @Component({
   selector: 'app-home',
   standalone: true,
+  imports: [History],
   templateUrl: './home.html',
   styleUrl: './home.scss'
 })
@@ -195,7 +197,6 @@ export class HomeComponent {
       start: 'top top',
       end: '+=480%',
       pin: true,
-      pinSpacing: true,
       scrub: 0.6,
       onUpdate: (self) => {
         master.progress(self.progress);
